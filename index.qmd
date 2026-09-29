@@ -1,0 +1,136 @@
+---
+title: "aRboretum : Modernizing botanical labels : towards an inclusive and automated scientific mediation"
+
+# Output formats
+format:
+  stylisharticle-pdf:
+    keep-tex: true
+    # Color example, see "Text color"
+    header-includes:
+      \definecolor{grey}{RGB}{191, 191, 191}
+  stylisharticle-html:
+    # Color example, see "Text color"
+    css: colors.css
+# Authors (https://quarto.org/docs/journals/authors.html#author-schema)
+author:
+  - name: Martin Boucknooghe
+    affiliations:
+      - name: Université de Montpellier
+        address: 30 place Eugène Bataillon
+        city: Montpellier
+        country: France
+        postal-code: 34090
+      - name: AgroParisTech
+        address: 648 Rue Jean François Breton
+        city: Montpellier
+        country: France
+        postal-code: 34090
+    orcid: 0000-0000-0000-0000
+    email: martin.boucknooghe@etu.umontpellier.fr
+    
+  - name: Domingos Cardoso
+  affiliations:
+      - name:
+        address:
+        city: Rio de Janeiro
+        country: Brasil
+        postal-code: 
+    orcid: 0000-0000-0000-0000
+    email: 
+
+# Abstract and Keywords
+abstract: |
+  [à remplir]
+keywords: [à remplir]
+# Bibliography
+reference-section-title: References
+bibliography: references.bib
+# Language
+lang: en-GB
+otherlangs: pt-BR
+# Code options 
+# https://quarto.org/docs/computations/execution-options.html
+execute:
+  # show code chunk output
+  include: true
+  # Show the code in the output
+  echo: false
+  # Show messages
+  message: false
+  # Show warnings
+  warning: false
+  # Cache code results
+  cache: true
+# Template specific
+journalinfo: "Publication reference"
+archive: "DOI: xxx/xx"
+keywordlabel: Keywords
+corrauthorlabel: Corresponding Author
+---
+
+```{r}
+#| label: Options
+### Customized R options for this document
+# Delete this chunk if you don't use R
+
+# Necessary packages. Add all packages used in the code here.
+packages_required <- c(
+  # R tools, do not modify
+  "knitr",
+  # Add specific packages here
+  "divent",
+  "tidyverse", 
+  "vegan"
+)
+# Already installed?
+packages_installed <- vapply(
+  packages_required, 
+  FUN = requireNamespace, 
+  FUN.VALUE = TRUE, 
+  quietly = TRUE
+) 
+# Install missing packages
+install.packages(names(packages_installed)[!packages_installed])
+
+# Allow size='small' or any valid Latex font size in chunk options
+def.chunk.hook <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(
+  chunk = function(x, options) {
+    x <- def.chunk.hook(x, options)
+    ifelse(
+      options$size == "normalsize", 
+      yes = x,
+      no = paste0("\n \\", options$size, "\n\n", x, "\n\n \\normalsize")
+    )
+  }
+)
+
+# knitr options (https://yihui.org/knitr/options/)
+knitr::opts_chunk$set(
+  # Code chunk automatic format if tidy is TRUE
+  tidy = TRUE, 
+  # Tidy code options: remove blank lines and cut lines after 50 characters
+  tidy.opts = list(blank = FALSE, width.cutoff = 50),
+  # Font size in PDF output
+  size = "scriptsize", 
+  # Select PDF figures in PDF output if PDF file exists beside PNG file
+  knitr.graphics.auto_pdf = TRUE
+)
+# Text width of R functions output
+options(width = 50)
+
+# ggplot style
+library("tidyverse")
+# Function to call in each chunk that produces a figure
+ggtheme_set <- function() {
+  theme_set(theme_bw())
+  theme_update(
+    panel.background = element_rect(fill = "transparent", colour = NA),
+    plot.background = element_rect(fill = "transparent", colour = NA)
+  )
+}
+knitr::opts_chunk$set(dev.args = list(bg = "transparent"))
+
+# Random seed
+set.seed(973)
+```
