@@ -2,3 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+
+*.html
+*.pdf
+*.log
+*_files/
+*.tex
+.positai
+index_cache/
+index.rmarkdown
