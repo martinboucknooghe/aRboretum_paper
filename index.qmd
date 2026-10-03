@@ -29,7 +29,7 @@ author:
     email: martin.boucknooghe@etu.umontpellier.fr
     
   - name: Domingos Cardoso
-  affiliations:
+    affiliations:
       - name:
         address:
         city: Rio de Janeiro
@@ -40,7 +40,7 @@ author:
 
 # Abstract and Keywords
 abstract: |
-  [à remplir]
+  As biodiversity continues to decline at an alarming rate, raising public awareness has become a crucial seed from which individual consciousness can grow and collective action can flourish. This internship report presents aRboretum, an open-source R package designed to transform botanical garden labels into effective scientific outreach tools. In response to the limitations of traditional plant labels and the urgent need for new approaches to public engagement, aRboretum automates the production, digitization, and enrichment of multilingual botanical labels. It integrates reliable taxonomic data, generates descriptions in multiple languages, and incorporates both audio and visual features. Designed as a modular tool, aRboretum streamlines label production, improves accessibility, and promotes inclusion by providing a participatory scientific communication platform adaptable to botanical gardens, education, biodiversity conservation, and many other applications.
 keywords: [à remplir]
 # Bibliography
 reference-section-title: References
@@ -134,3 +134,9 @@ knitr::opts_chunk$set(dev.args = list(bg = "transparent"))
 # Random seed
 set.seed(973)
 ```
+
+# Introduction
+
+#Methods and Results
+
+#Conclusion
