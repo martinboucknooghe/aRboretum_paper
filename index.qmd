@@ -137,8 +137,7 @@ set.seed(973)
 
 # Introduction
 
-Botanical gardens, such as the Jardim Botânico do
-Rio de Janeiro (JBRJ), founded in 1808 and a UNESCO World Heritage Site (UNESCO Heritage Centre), play an essential multifunctional role for ex situ conservation, environmental education and taxonomic research.
+Botanical gardens, such as the Jardim Botânico do Rio de Janeiro (JBRJ), founded in 1808 and a UNESCO World Heritage Site (UNESCO Heritage Centre), play an essential multifunctional role for ex situ conservation, environmental education and taxonomic research.
 According to the International Union for Conservation of Nature (IUCN), these institutions maintain and house more than 100,000 plant species, or about 30% of the world's vascular flora with an overrepresentation of endangered species [@mounce2017].
 The JBRJ participates in this effort by sheltering more than 8,000 species, many of which are endemic to Brazil (JBRJ), making it a vital reserve of native flora for unique ecosystems such as the Mata Atlântica, the Cerrado or the Amazon.
 
