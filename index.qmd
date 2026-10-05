@@ -40,7 +40,7 @@ author:
 
 # Abstract and Keywords
 abstract: |
-  As biodiversity continues to decline at an alarming rate, raising public awareness has become a crucial seed from which individual consciousness can grow and collective action can flourish. This paper presents aRboretum, an open-source R package designed to transform botanical garden labels into effective scientific outreach tools. In response to the limitations of traditional plant labels and the urgent need for new approaches to public engagement, aRboretum automates the production, digitization, and enrichment of multilingual botanical labels. It integrates reliable taxonomic data, generates descriptions in multiple languages, and incorporates both audio and visual features. Designed as a modular tool, aRboretum streamlines label production, improves accessibility, and promotes inclusion by providing a participatory scientific communication platform adaptable to botanical gardens, education, biodiversity conservation, and many other applications.
+  As biodiversity continues to decline at an alarming rate, raising public awareness has become a crucial seed from which individual consciousness can grow and collective action can flourish. This paper presents *aRboretum*, an open-source R package designed to transform botanical garden labels into effective scientific outreach tools. In response to the limitations of traditional plant labels and the urgent need for new approaches to public engagement, *aRboretum* automates the production, digitization, and enrichment of multilingual botanical labels. It integrates reliable taxonomic data, generates descriptions in multiple languages, and incorporates both audio and visual features. Designed as a modular tool, *aRboretum* streamlines label production, improves accessibility, and promotes inclusion by providing a participatory scientific communication platform adaptable to botanical gardens, education, biodiversity conservation, and many other applications.
 keywords: [à remplir]
 # Bibliography
 reference-section-title: References
@@ -137,13 +137,17 @@ set.seed(973)
 
 # Introduction
 
+*Central role of botanical gardens in conservation and scientific mediation*
+
 Botanical gardens play an essential multifunctional role for ex situ conservation, environmental education and taxonomic research.
 According to the International Union for Conservation of Nature (IUCN), these institutions maintain and house more than 100,000 plant species, or about 30% of the world's vascular flora with an overrepresentation of endangered species [@mounce2017].
 Yet, their scientific and educational value is generally underexplored due to structural limitations in communicating information to visitors.
 Indeed, botanical gardens are not content with conserving plants; They represent spaces for raising awareness for the general public.
 Their mission therefore includes the transmission of knowledge, an issue that is all the more crucial as global biodiversity is in accelerated decline [@ipbes2019].
 
-In this context, the botanical label is the first vector of information linking the public and living collections, and a key tool for mediating between science and the public.
+*Botanical labelling: a tool for mediating between science and the public*
+
+The botanical label is the first vector of information linking the public and living collections, and a key tool for mediating between science and the public.
 Traditionally, it is limited to the scientific name, the local vernacular name, the family and sometimes the country of origin.
 However, this approach has three major limitations that hinder scientific mediation and the enhancement of collections.
 First, printed labels are frozen in time, whereas taxonomy is dynamic: progress in molecular phylogeny, the integration of new morphological data and the revision of herbarium collections lead to regular updates [@freiberg2020].
@@ -154,6 +158,8 @@ Visually impaired visitors and those who cannot read, such as children, cannot a
 The language barrier also limits visitors' understanding, particularly given the very large number of international tourists that Rio de Janeiro welcomes each year, nearly 2.2 million in 2025 [@governodoestadodoriodejaneiro2025].
 Finally, traditional labels are passive, whereas, according to @harada2018, interactive experiences promote visitor engagement and enhance learning by stimulating active participation.
 
+*Existing tools: a fragmented landscape*
+
 The development of open science and citizen science encourages the provision of data and tools that are reproducible, transparent and accessible to all [@europeancommission2016].
 In this context, botanical mediation tools must evolve towards open, modular and participatory platforms, allowing the integration of diverse content, including local and community knowledge.
 
@@ -162,6 +168,8 @@ Expowo [@zuanny2026] and refloraR (retrouver la ref: Cardoso and Calderón 2026)
 labeleR [@ramos-gutierrez2026] is a tool designed for the creation of labels for herbaria; it does not manage living collections, is limited to minimal information (scientific name, family, locality), and does not integrate enriched data.
 Moreover, its use requires expertise in R and it does not offer interactive features.
 Thus, no existing tool offers an integrated, accessible and interactive solution for living collections.
+
+*Issues*
 
 Faced with this observation, we developed the aRboretum package to answer four major questions: (1) how can the production chain of botanical labels (from raw data to final display) be automated while guaranteeing taxonomic reliability, avoiding manual errors and reducing production time by relying on reliable sources; (2) how can heterogeneous data (FFB, POWO, local knowledge) be integrated and standardised to produce labels that are both scientifically rigorous and rich in contextual information, combining structured data (taxonomy, distribution) with additional local content (vernacular names, uses, free notes); (3) how can botanical information be made accessible to all audiences, as widely as possible, to maximize the educational and inclusive impact of botanical gardens; and (4) how can this tool be made accessible and usable by a multitude of institutions and actors, through a simple interface that can be adapted to different contexts.
 
